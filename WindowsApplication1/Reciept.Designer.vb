@@ -73,7 +73,7 @@ Partial Class Reciept
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(648, 416)
+        Me.ClientSize = New System.Drawing.Size(646, 416)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
