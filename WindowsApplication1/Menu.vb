@@ -86,4 +86,9 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         adder(2, InputBox("How much will you order?", "Order Amount", 0))
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        DataGridView1.Rows.Clear()
+        total = 0
+    End Sub
 End Class
