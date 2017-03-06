@@ -34,24 +34,25 @@
     Private Sub adder(product As Integer, quantity As Integer)
         Select Case product
             Case 1
-                adder("Drumstick", quantity, 45, Not chicken(product))
+                adder("Drumstick", quantity, 45, chicken(product))
             Case 2
-                adder("Wings", quantity, 35, Not chicken(product))
+                adder("Wings", quantity, 35, chicken(product))
             Case 3
-                adder("Thighs", quantity, 50, Not chicken(product))
+                adder("Thighs", quantity, 50, chicken(product))
             Case 4
-                adder("Rice", quantity, 10, Not chicken(product))
+                adder("Rice", quantity, 10, chicken(product))
             Case 0
-                adder("Breast", quantity, 55, Not chicken(product))
+                adder("Breast", quantity, 55, chicken(product))
         End Select
         chicken(product) = True
         DataGridView1.ClearSelection()
         total = 0
         For Each tester As DataGridViewRow In DataGridView1.Rows
             Dim s As String = tester.Cells.Item("Amount").Value
-            s.Substring(1, s.Length - 2)
+            s = s.Substring(1, s.Length - 1)
             total += CInt(s)
         Next
+        Label2.Text = "P" + CStr(total)
     End Sub
 
     Private Sub adder(name As String, q As Integer, p As Integer, c As Boolean)
