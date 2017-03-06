@@ -26,6 +26,7 @@ Partial Class Menu
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -35,7 +36,8 @@ Partial Class Menu
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -51,7 +53,7 @@ Partial Class Menu
         Me.Button6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(43, 320)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(198, 49)
+        Me.Button6.Size = New System.Drawing.Size(240, 49)
         Me.Button6.TabIndex = 3
         Me.Button6.Text = "Checkout Order"
         Me.Button6.UseVisualStyleBackColor = False
@@ -59,24 +61,47 @@ Partial Class Menu
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Button10)
         Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Location = New System.Drawing.Point(601, -5)
+        Me.Panel1.Location = New System.Drawing.Point(557, -5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(277, 487)
+        Me.Panel1.Size = New System.Drawing.Size(321, 487)
         Me.Panel1.TabIndex = 4
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.DataGridView1.Location = New System.Drawing.Point(0, 25)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(277, 268)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(321, 256)
         Me.DataGridView1.TabIndex = 5
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(43, 430)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(240, 31)
+        Me.Button10.TabIndex = 3
+        Me.Button10.Text = "Logout"
+        Me.Button10.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -88,7 +113,7 @@ Partial Class Menu
         Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Location = New System.Drawing.Point(43, 375)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(198, 49)
+        Me.Button7.Size = New System.Drawing.Size(240, 49)
         Me.Button7.TabIndex = 3
         Me.Button7.Text = "Clear"
         Me.Button7.UseVisualStyleBackColor = False
@@ -140,7 +165,7 @@ Partial Class Menu
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(27, 235)
+        Me.Button4.Location = New System.Drawing.Point(11, 232)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(176, 156)
         Me.Button4.TabIndex = 0
@@ -153,7 +178,7 @@ Partial Class Menu
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(391, 162)
+        Me.Button5.Location = New System.Drawing.Point(375, 159)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(176, 156)
         Me.Button5.TabIndex = 0
@@ -166,7 +191,7 @@ Partial Class Menu
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(209, 235)
+        Me.Button3.Location = New System.Drawing.Point(193, 232)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(176, 156)
         Me.Button3.TabIndex = 0
@@ -179,7 +204,7 @@ Partial Class Menu
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(209, 73)
+        Me.Button2.Location = New System.Drawing.Point(193, 70)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(176, 156)
         Me.Button2.TabIndex = 0
@@ -192,26 +217,35 @@ Partial Class Menu
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(27, 71)
+        Me.Button1.Location = New System.Drawing.Point(11, 68)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(176, 156)
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button10
+        'Label1
         '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(43, 430)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(198, 31)
-        Me.Button10.TabIndex = 3
-        Me.Button10.Text = "Logout"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(27, 284)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(90, 25)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "SubTotal:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(123, 284)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 25)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "P0.00"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Menu
         '
@@ -231,6 +265,7 @@ Partial Class Menu
         Me.Name = "Menu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -250,4 +285,6 @@ Partial Class Menu
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class
