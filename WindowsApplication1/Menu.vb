@@ -21,15 +21,18 @@
         My.Forms.Login.Show()
         Me.Close()
     End Sub
-
+    Public x As DataGridViewRowCollection
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim myValue As Object
-        myValue = InputBox("test", "yawa", 1)
-        Label2.Text = myValue
+        x = DataGridView1.Rows
+        myValue = InputBox("Input Amount Tendered", "Amount Tendered", 0)
+        My.Forms.Reciept.amountT = myValue
+        Hide()
+        My.Forms.Reciept.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        adder(0, InputBox("pilaman", "gadi", 0))
+        adder(0, InputBox("how many orders?", "ORDER", 0))
     End Sub
     Private Sub adder(product As Integer, quantity As Integer)
         Select Case product
@@ -87,8 +90,14 @@
         adder(2, InputBox("How much will you order?", "Order Amount", 0))
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Public Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         DataGridView1.Rows.Clear()
+        Label2.Text = "P0.00"
         total = 0
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
 End Class

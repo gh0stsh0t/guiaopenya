@@ -27,15 +27,17 @@ Partial Class Login
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -102,24 +104,34 @@ Partial Class Login
         Me.Panel2.Size = New System.Drawing.Size(197, 77)
         Me.Panel2.TabIndex = 3
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources._1910481_829057653780884_7635466711984673441_n
+        Me.PictureBox1.Location = New System.Drawing.Point(-3, -11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(197, 171)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.Panel2)
-        Me.Panel3.Location = New System.Drawing.Point(-4, 2)
+        Me.Panel3.Location = New System.Drawing.Point(-4, -63)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(197, 448)
+        Me.Panel3.Size = New System.Drawing.Size(197, 460)
         Me.Panel3.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(29, 173)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 94)
+        Me.Label1.Size = New System.Drawing.Size(160, 94)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Point of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Sales"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -142,15 +154,26 @@ Partial Class Login
         Me.TextBox2.Size = New System.Drawing.Size(133, 15)
         Me.TextBox2.TabIndex = 5
         '
-        'PictureBox1
+        'Label2
         '
-        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources._1910481_829057653780884_7635466711984673441_n
-        Me.PictureBox1.Location = New System.Drawing.Point(-3, -12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(197, 171)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(236, 145)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 17)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Username: "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(239, 173)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 17)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Password: "
         '
         'Login
         '
@@ -159,6 +182,8 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(561, 390)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel3)
@@ -170,9 +195,9 @@ Partial Class Login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +213,6 @@ Partial Class Login
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class
